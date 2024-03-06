@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#toolbar {
+    background-color: #3498db;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    background-color: #2980b9;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar-button:hover {
+    background-color: #1f6cba;
+}
+
+.toolbar-button:focus {
+    outline: none;
+}
+
+#strokeColorPicker,
+#fillColorPicker {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#thickness {
+    width: 100px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#canvas {
+    border: 1px solid #000;
+    margin: 20px;
+    background-color: #fff;
+}

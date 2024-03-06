@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Editor SVG</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="toolbar">
+        <div>
+            <button class="toolbar-button" onclick="addShape('line')">Linie</button>
+            <button class="toolbar-button" onclick="addShape('ellipse')">Elipsă</button>
+            <button class="toolbar-button" onclick="addShape('rect')">Dreptunghi</button>
+        </div>
+        <div>
+            <input type="color" id="strokeColorPicker" onchange="changeStrokeColor(this.value)" value="#000000">
+            <input type="color" id="fillColorPicker" onchange="changeFillColor(this.value)" value="#ffffff">
+            <input type="range" id="thickness" min="1" max="10" onchange="changeThickness(this.value)" value="1">
+            <button class="toolbar-button" onclick="deleteSelected()">Șterge</button>
+            <button class="toolbar-button" onclick="undo()">Undo</button>
+            <button class="toolbar-button" onclick="exportToRaster('png')">Export PNG</button>
+            <button class="toolbar-button" onclick="exportToRaster('jpeg')">Export JPEG</button>
+            <button class="toolbar-button" onclick="exportToSVG()">Export SVG</button>
+        </div>
+    </div>
+    <svg id="canvas" width="800" height="800"></svg>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
